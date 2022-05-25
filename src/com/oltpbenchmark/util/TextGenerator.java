@@ -117,6 +117,17 @@ public abstract class TextGenerator {
         prefix.getChars(0, Math.min(prefix.length(), strLen), chars, 0);
         return new String(chars);
     }
+
+    public static String getRandomString(int length) {
+        String str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        Random random = new Random();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < length; i++) {
+            int number = random.nextInt(62);
+            sb.append(str.charAt(number));
+        }
+        return sb.toString();
+    }
     
     /**
      * Resize the given block of text by the delta and add random characters
