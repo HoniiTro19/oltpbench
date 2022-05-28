@@ -113,7 +113,8 @@ public abstract class DBCollector {
         DBCollector collector;
 
         switch (dbType) {
-        case MEMSQL: // Uses MySQLCollector
+        case MEMSQL:
+        case OCEANBASE: // Uses MySQLCollector
         case MYSQL: {
             collector = new MySQLCollector(dbUrl, dbUsername, dbPassword);
             break;
