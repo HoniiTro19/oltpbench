@@ -11,4 +11,4 @@ CREATE TABLE USERTABLE (
   	FIELD8 VARCHAR(100),
   	FIELD9 VARCHAR(100), 
   	FIELD10 VARCHAR(100)
-) partition by hash(YCSB_KEY) partitions 100;
+) partition by hash(YCSB_KEY) partitions 1000;
